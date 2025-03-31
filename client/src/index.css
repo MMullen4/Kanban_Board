@@ -24,7 +24,7 @@ input:-moz-placeholder {
 
 a {
   font-weight: 500;
-  color: #000000;
+  color: #100f0f;
   text-decoration: inherit;
 }
 a:hover {
@@ -54,7 +54,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #6870e0;
   cursor: pointer;
   transition: border-color 0.25s;
 }
