@@ -7,21 +7,23 @@ export const login = async (req, res) => {
     const { username, password } = req.body;
     const user = await User.findOne({
         where: {
-            username
-        },
+            username: username
+        }
     });
     if (!user) {
-        return res.status(401).json({ message: 'Invalid username or password' });
+        res.status(401), ({ message: 'Invalid username or password' });
+        return;
     }
     const passwordIsValid = await bcrypt.compare(password, user.password);
     if (!passwordIsValid) {
-        return res.status(401).json({ message: 'Invalid username or password' });
+        res.status(401), ({ message: 'Invalid username or password' });
+        return;
     }
-    const secretKey = process.env.JWT_SECRET_KEY || '';
-    const token = jwt.sign({ username }, secretKey, { expiresIn: '2h' });
-    return res.json({ token });
+    const token = jwt.sign({ username: user.username }, process.env.JWT_SECRET_KEY);
+    res.json({ token });
 };
 const router = Router();
 // POST /login - Login a user
 router.post('/login', login);
 export default router;
+// all good

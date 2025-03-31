@@ -9,3 +9,4 @@ router.use('/auth', authRoutes);
 // protected API routes
 router.use('/api', authenticateToken, apiRoutes);
 export default router;
+// all good
