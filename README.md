@@ -5,6 +5,11 @@ A web-based Kanban board application with secure user authentication.
 ## Description
 
 This project implements a digital Kanban board system that helps users visualize and manage their work. It includes user authentication to ensure secure access to personal boards and tasks.
+
+Deployed Site -
+https://kanban-board-u7fr.onrender.com
+
+
 ![Alt text](<Screenshot 2025-04-02 at 11.06.40 AM.png>)
 ![Alt text](<Screenshot 2025-04-02 at 11.07.07 AM.png>)
 
